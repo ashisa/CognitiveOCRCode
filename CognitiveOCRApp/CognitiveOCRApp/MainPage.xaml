@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="CognitiveOCRApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CognitiveOCRApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <CaptureElement Name="PreviewControl" Stretch="Uniform"/>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+            <Button Name="PhotoButton" Click="PhotoButton_Click" IsEnabled="True" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <Viewbox MaxWidth="40" MaxHeight="40">
+                    <SymbolIcon Symbol="Camera"/>
+                </Viewbox>
+            </Button>
+            <TextBlock x:Name="statusText" Text="Status" Width="300" Height="125" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+        </StackPanel>
+
+
+    </Grid>
+</Page>
